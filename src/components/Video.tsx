@@ -5,11 +5,12 @@ import { gql, useQuery } from "@apollo/client";
 import "@vime/core/themes/default.css"
 
 const GET_LESSONS_BY_SLUG_QUERY = gql `
-  query GetLEssonBySlug ($slug: String) {
+  query GetLEssonBySlug($slug: String) {
     lesson(where: {slug: $slug}) {
       title
       id
       description
+      videoId
       teacher {
         bio
         avatarURL
@@ -26,6 +27,7 @@ interface VideoProps {
 interface GetLessonBySlugResponse {
   lesson: {
     tittle: string;
+    id: string;
     videoId: string;
     description: string;
     teacher: {
@@ -35,6 +37,7 @@ interface GetLessonBySlugResponse {
     }
   }
 }
+
 
 
 export function Video(props: VideoProps){
@@ -51,6 +54,7 @@ export function Video(props: VideoProps){
       </div>
     )
   }
+  console.log(data)
 
 
   return (
