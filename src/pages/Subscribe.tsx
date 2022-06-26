@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/assets/Logo";
 import { useCreateSubscriberMutation } from "../generated";
 
+import imgCodeMockup from '../assets/code-mockup.png'
+
 
 export function Subscribe(){
   const navigate = useNavigate()
@@ -78,7 +80,7 @@ export function Subscribe(){
 
       </div>
 
-      <img src="./src/assets/code-mockup.png" className="mt-10" alt="Exemplos de produções realizadas" />
+      <img src={imgCodeMockup} className="mt-10" alt="Exemplos de produções realizadas" />
     </div>
   )
 }
