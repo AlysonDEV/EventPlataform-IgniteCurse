@@ -78,7 +78,7 @@ export function Subscribe(){
 
       </div>
 
-      <img src="/src/components/assets/code-mockup.png" className="mt-10" alt="" />
+      <img src="./src/assets/code-mockup.png" className="mt-10" alt="Exemplos de produções realizadas" />
     </div>
   )
 }
